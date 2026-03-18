@@ -14,8 +14,14 @@ public class CustomList {
         cities.add(city);
     }
 
-    public boolean hasCity(City calgary) {
-        return cities.contains(calgary);
+    public boolean hasCity(City city) {
+        return cities.contains(city);
+    }
+
+    public void deleteCity(City city) {
+        if (!cities.remove(city)) {
+            throw new IllegalArgumentException();
+        }
     }
 
 
